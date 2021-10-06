@@ -5,6 +5,8 @@
 #include <chrono>
 #include "InsertionSort.h"
 #include "MergeSort.h"
+#include "RadixSort.h"
+#include "TimSort.h"
 
 using namespace std;
 using namespace std::chrono;
