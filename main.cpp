@@ -62,7 +62,7 @@ int main(){
 
   // Calculating the duration of the sorting algorithm
   duration = duration_cast<microseconds>(stop - start);
-  cout << "Duration of MergSort(k = 10): " << duration.count() << "microseconds."<< endl;
+  cout << "Duration of MergSort(k = 100): " << duration.count() << "microseconds."<< endl;
 
   return 0;
 }
