@@ -15,16 +15,19 @@ int main(){
   int size;
   vector<int> data;
   int element;
-  string fileName = "set1_1M.txt";
+  string inFileName = "set1_1M.txt";
+  string outFileName = "Output.txt";
   ifstream inputFile;
+  ofstream outFile;
 
   // Opening file
-  inputFile.open(fileName.c_str());
+  inputFile.open(inFileName.c_str());
+  freopen(outFileName.c_str(),"w",stdout);
 
   // Test for opening fail
   if(!inputFile)
   {
-     cout << "The file " << fileName << " could not be opened." << endl;
+     cout << "The file " << inFileName << " could not be opened." << endl;
   } // END if(!inputFile)
 
 
@@ -47,7 +50,7 @@ int main(){
 
   // Calculating the duration of the sorting algorithm
   auto duration = duration_cast<microseconds>(stop - start);
-  cout << "Duration of MergSort(k = 10): " << duration.count() << "microseconds."<< endl;
+  cout << "Finished!" << endl << "Duration: " << duration.count() << "microseconds."<< endl << endl;
 
   // Recording time stamp before sorting
   cout << "Running MergSort(k = 100)" << endl;
@@ -62,7 +65,7 @@ int main(){
 
   // Calculating the duration of the sorting algorithm
   duration = duration_cast<microseconds>(stop - start);
-  cout << "Duration of MergSort(k = 100): " << duration.count() << "microseconds."<< endl;
+  cout << "Finished!" << endl << "Duration: " << duration.count() << "microseconds."<< endl << endl;
 
   return 0;
 }
