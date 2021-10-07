@@ -4,14 +4,14 @@
   We put all the sorting algorithms as functions in the main.cpp
   To run the code, compile main.cpp and run a.out.                                                  
   
-  $ g++ main.cpp
-  $ ./a.out
+    $ g++ main.cpp
+    $ ./a.out
   
   The output will be located in a newly created file within the same file location as main.cpp called "Output.txt".
   
   you may use the cat command to view within console.
   
-  $ cat Output.txt
+    $ cat Output.txt
 
 ---------------------------------------------------------------------------------------------------------------------------------
 Assignment Details:
