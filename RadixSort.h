@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
-const int n = 1000000;
-int M = 2;
 using namespace std;
 void radixSort(vector<int>&arr) {
+  const int n = 1000000;
+  int M = 2;
    int i, j, m, p = 1, index, temp, count = 0;
    list<int> pocket[10];
    for(i = 0; i< M; i++) {

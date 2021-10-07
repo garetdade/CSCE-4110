@@ -53,12 +53,13 @@ void merge(vector<int>& v, int s, int m, int e) {
 // of arr to be sorted */
 void mergeSort(vector<int>& array, int const begin, int const end, int const k)
 {
-    if (end - begin <= k)
+    if (end - begin <= k){
         insertionSort(array, begin, end); // Returns recursively
-        else{
-          auto mid = begin + (end - begin) / 2;
-          mergeSort(array, begin, mid, k);
-          mergeSort(array, mid + 1, end, k);
-          merge(array, begin, mid, end);
-        }
+		}
+    else if(begin < end){
+        auto mid = begin + (end - begin) / 2;
+        mergeSort(array, begin, mid, k);
+        mergeSort(array, mid + 1, end, k);
+        merge(array, begin, mid, end);
+      }
 }

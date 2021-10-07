@@ -1,10 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
-const int RUN = 32;
-const int n=1000000;
 int arr[1000005];
 int L[1000005], R[1000005];
-void insertionSort(vector<int>&arr,int L, int R)
+
+void insertionSortT(vector<int>&arr,int L, int R)
 {
 	for (int i = L + 1; i <= R; i++)
 	{
@@ -19,7 +18,7 @@ void insertionSort(vector<int>&arr,int L, int R)
 	}
 }
 
-void merge(vector<int>&arr,int l, int m, int r)
+void mergeT(vector<int>&arr,int l, int m, int r)
 {
 	int len1 = m - l + 1, len2 = r - m;
 	for (int i = 0; i < len1; i++)
@@ -63,9 +62,11 @@ void merge(vector<int>&arr,int l, int m, int r)
 
 void timSort(vector<int>&arr)
 {
+	const int RUN = 32;
+	const int n=1000000;
 	for (int i = 0; i < n; i+=RUN)
-		insertionSort(arr,i, min((i+RUN-1),(n-1)));
-		
+		insertionSortT(arr,i, min((i+RUN-1),(n-1)));
+
 	for (int size = RUN; size < n; size = 2*size)
 	{
 		for (int L = 0; L < n; L += 2*size)
@@ -73,7 +74,7 @@ void timSort(vector<int>&arr)
 			int mid = L + size - 1;
 			int R = min((L + 2*size - 1),(n-1));
 			if(mid < R)
-				merge(arr,L, mid, R);
+				mergeT(arr,L, mid, R);
 		}
 	}
 }
