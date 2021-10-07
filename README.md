@@ -40,5 +40,5 @@ Part 2: Measuring Signal Strength (20)
     If you can find ananalogous problem you can use the answer as long as you cite the source.]
 
   
-  To run the code, compile main.cpp
+  To run the code, compile main.cpp                                                  
   We put all the sorting algorithms as functions in the main.cpp
