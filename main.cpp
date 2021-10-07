@@ -5,9 +5,10 @@
 #include <chrono>
 #include <ratio>
 #include "InsertionSort.h"
+#include "TimSort.h"
 #include "MergeSort.h"
 #include "RadixSort.h"
-#include "TimSort.h"
+//#include "quicksort.h"
 
 using namespace std;
 using namespace std::chrono;
@@ -77,7 +78,6 @@ int main(){
     duration = duration_cast<microseconds>(stop - start);
     aver += duration.count();
     counter++;
-    cout << "test " << i << " Complete... " <<  endl;
   }
 
   // Priting Results to output file
@@ -121,7 +121,70 @@ int main(){
   counter = 0;
 //-------------------------------------------------------------------------------
 
+/*
+//---------------------------------Quick Sort (k = 10)---------------------------
+  // Recording time stamp before sorting
+  cout << "Running QuickSort" << endl;
 
+  // Calling the sort algorithm
+  k = 10;
+  for (i = 0; i < 20; i++){
+    vect = data[i];
+    // Recording starting time of algorithm
+    start = high_resolution_clock::now();
+
+    // Calling the sorting algorithm
+    QuickSort(vect, 0, size[i] - 1, k);
+
+    // recording time stamp after sorting
+    stop = high_resolution_clock::now();
+
+    // Calculating the duration of the sorting algorithm
+    duration = duration_cast<microseconds>(stop - start);
+    aver += duration.count();
+    counter++;
+  }
+
+  // Priting Results to output file
+  cout << "Finished " << counter << "tests with a total runtime of " << aver << " microseconds!" << endl << "Average Duration: " << aver/20 << " microseconds."<< endl << endl;
+
+  // Resetting average counter
+  aver = 0;
+  counter = 0;
+//-------------------------------------------------------------------------------
+
+//---------------------------------Quick Sort (k = 1000)---------------------------
+  // Recording time stamp before sorting
+  cout << "Running QuickSort" << endl;
+
+  // Calling the sort algorithm
+  k = 1000;
+  for (i = 0; i < 20; i++){
+    vect = data[i];
+    // Recording starting time of algorithm
+    start = high_resolution_clock::now();
+
+    // Calling the sorting algorithm
+    QuickSort(vect, 0, size[i] - 1, k);
+
+    // recording time stamp after sorting
+    stop = high_resolution_clock::now();
+
+    // Calculating the duration of the sorting algorithm
+    duration = duration_cast<microseconds>(stop - start);
+    aver += duration.count();
+    counter++;
+  }
+
+  // Priting Results to output file
+  cout << "Finished " << counter << "tests with a total runtime of " << aver << " microseconds!" << endl << "Average Duration: " << aver/20 << " microseconds."<< endl << endl;
+
+  // Resetting average counter
+  aver = 0;
+  counter = 0;
+//-------------------------------------------------------------------------------
+
+*/
 //---------------------------------Radix Sort---------------------------
   // Recording time stamp before sorting
   cout << "Running RadixSort" << endl;
@@ -145,7 +208,7 @@ int main(){
   }
 
   // Priting Results to output file
-  cout << "Finished " << counter << "tests with a total runtime of " << aver << " microseconds!" << endl << "Average Duration: " << aver/20 << " microseconds."<< endl << endl;
+  cout << "Finished " << counter << " tests with a total runtime of " << aver << " microseconds!" << endl << "Average Duration: " << aver/20 << " microseconds."<< endl << endl;
 
   // Resetting average counter
   aver = 0;
@@ -153,9 +216,9 @@ int main(){
 //-------------------------------------------------------------------------------
 
 
-//---------------------------------Time Sort---------------------------
+//---------------------------------Tim Sort---------------------------
   // Recording time stamp before sorting
-  cout << "Running TimeSort" << endl;
+  cout << "Running TimSort" << endl;
 
   // Calling the sort algorithm
   for (i = 0; i < 20; i++){
@@ -176,7 +239,7 @@ int main(){
   }
 
   // Priting Results to output file
-  cout << "Finished " << counter << "tests with a total runtime of " << aver << " microseconds!" << endl << "Average Duration: " << aver/20 << " microseconds."<< endl << endl;
+  cout << "Finished " << counter << " tests with a total runtime of " << aver << " microseconds!" << endl << "Average Duration: " << aver/20 << " microseconds."<< endl << endl;
 
   // Resetting average counter
   aver = 0;

@@ -20,8 +20,9 @@ void merge(vector<int>& v, int s, int m, int e) {
 	i = s;
 	j = m + 1;
 
+	// Looping through until one side is merged
 	while (i <= m && j <= e) {
-
+		// If left is smaller, place in temp vector. Else place right in temp vector
 		if (v[i] <= v[j]) {
 			temp.push_back(v[i]);
 			++i;
@@ -30,19 +31,21 @@ void merge(vector<int>& v, int s, int m, int e) {
 			temp.push_back(v[j]);
 			++j;
 		}
-
 	}
 
+	// Place remaning left elements in temp vector
 	while (i <= m) {
 		temp.push_back(v[i]);
 		++i;
 	}
 
+	// Place remaning right elements in temp vector
 	while (j <= e) {
 		temp.push_back(v[j]);
 		++j;
 	}
 
+	// Copy over the sorted temp back into the original vector 
 	for (int i = s; i <= e; ++i)
 		v[i] = temp[i - s];
 
