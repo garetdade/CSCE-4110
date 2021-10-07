@@ -1,5 +1,21 @@
 # CSCE-4110 hw2
 
+--------------------------------------------------------------------------------------------------------------------------------
+  We put all the sorting algorithms as functions in the main.cpp
+  To run the code, compile main.cpp and run a.out.                                                  
+  
+  $ g++ main.cpp
+  $ ./a.out
+  
+  The output will be located in a newly created file within the same file location as main.cpp called "Output.txt".
+  
+  you may use the cat command to view within console.
+  
+  $ cat Output.txt
+
+---------------------------------------------------------------------------------------------------------------------------------
+Assignment Details:
+
 Part 1: Comparing Sorting Algorithms. 
   1. Create 10 sets of 1 million integers. Use random numbers to generate the inputs such that the sets have sufficiently diverse set of numbers.
   
@@ -39,6 +55,15 @@ Part 2: Measuring Signal Strength (20)
     However, the online problem will not be the same “story” as given here.  
     If you can find ananalogous problem you can use the answer as long as you cite the source.]
 
-  
-  To run the code, compile main.cpp                                                  
+  --------------------------------------------------------------------------------------------------------------------------------
   We put all the sorting algorithms as functions in the main.cpp
+  To run the code, compile main.cpp and run a.out.                                                  
+  
+  $ g++ main.cpp
+  $ ./a.out
+  
+  The output will be located in a newly created file within the same file location as main.cpp called "Output.txt".
+  
+  you may use the cat command to view within console.
+  
+  $ cat Output.txt
