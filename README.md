@@ -54,16 +54,3 @@ Part 2: Measuring Signal Strength (20)
     [HINT: This a well-known computer science problem, and you may find a solution online.
     However, the online problem will not be the same “story” as given here.  
     If you can find ananalogous problem you can use the answer as long as you cite the source.]
-
-  --------------------------------------------------------------------------------------------------------------------------------
-  We put all the sorting algorithms as functions in the main.cpp
-  To run the code, compile main.cpp and run a.out.                                                  
-  
-  $ g++ main.cpp
-  $ ./a.out
-  
-  The output will be located in a newly created file within the same file location as main.cpp called "Output.txt".
-  
-  you may use the cat command to view within console.
-  
-  $ cat Output.txt
