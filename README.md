@@ -38,3 +38,7 @@ Part 2: Measuring Signal Strength (20)
     [HINT: This a well-known computer science problem, and you may find a solution online.
     However, the online problem will not be the same “story” as given here.  
     If you can find ananalogous problem you can use the answer as long as you cite the source.]
+
+  
+  To run the code, compile main.cpp
+  We put all the sorting algorithms as functions in the main.cpp
