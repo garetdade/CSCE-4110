@@ -8,7 +8,7 @@
 #include "TimSort.h"
 #include "MergeSort.h"
 #include "RadixSort.h"
-//#include "quicksort.h"
+#include "quicksort.h"
 
 using namespace std;
 using namespace std::chrono;
@@ -69,7 +69,7 @@ int main(){
     start = high_resolution_clock::now();
 
     // Calling the sorting algorithm
-    mergeSort(vect, 0, 100000, k);
+    mergeSort(vect, 0, size[i] - 1, k);
 
     // recording time stamp after sorting
     stop = high_resolution_clock::now();
@@ -102,7 +102,7 @@ int main(){
     start = high_resolution_clock::now();
 
     // Calling the sorting algorithm
-    mergeSort(vect, 0, 100000, k);
+    mergeSort(vect, 0, size[i] - 1, k);
 
     // recording time stamp after sorting
     stop = high_resolution_clock::now();
@@ -121,7 +121,7 @@ int main(){
   counter = 0;
 //-------------------------------------------------------------------------------
 
-/*
+
 //---------------------------------Quick Sort (k = 10)---------------------------
   // Recording time stamp before sorting
   cout << "Running QuickSort" << endl;
@@ -184,7 +184,7 @@ int main(){
   counter = 0;
 //-------------------------------------------------------------------------------
 
-*/
+
 //---------------------------------Radix Sort---------------------------
   // Recording time stamp before sorting
   cout << "Running RadixSort" << endl;

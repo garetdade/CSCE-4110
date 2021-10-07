@@ -7,26 +7,17 @@
 #include <stdlib.h>
 using namespace std;
 
-class QuickSort {
-	private:
-		int partition(vector<int> &data, int right, int left);
-		void swap(int a, int b);
-
-	public:
-		QuickSort(vector<int> &A, int low, int high, int par);
-		~QuickSort();
-};
 
 
 // for swaping elements in a vector (vector, position 1, position 2)
-void QuickSort::swap(vector<int> &a, int i, int j) {
+void swap(vector<int> &a, int i, int j) {
 	int temp = a[i];
 	a[i] = a[j];
 	a[j] = temp;
 }
 
 // finding the median of three for best possible pivot
-int QuickSort::partition(vector<int> &a, int low, int high) {
+int partition(vector<int> &a, int low, int high) {
     // Pick the rightmost element as a pivot from the array
     int pivot = a[high];
 
@@ -41,30 +32,30 @@ int QuickSort::partition(vector<int> &a, int low, int high) {
     {
         if (a[i] <= pivot)
         {
-            swap(a[i], a[pIndex]);
+            swap(a, i, pIndex);
             pIndex++;
         }
     }
     // swap `pIndex` with pivot
-    swap (&a, pIndex, high);
+    swap(a, pIndex, high);
 
     // return `pIndex` (index of the pivot element)
     return pIndex;
 }
 
 
-QuickSort::QuickSort(vector<int> &A, int low, int high, int par)
+void QuickSort(vector<int> &A, int low, int high, int par)
 {
     while (low < high)
     {
         // switch to insertion sort if the size is smaller than partition limit given
         if (high - low < par)
         {
-            insertionSort(&A, low, high);
+            insertionSort(A, low, high);
             break;
         }
         else {
-            int pivot = partition(&A, low, high);
+            int pivot = partition(A, low, high);
 
             // tail call optimizations – recur on the smaller subarray
             if (pivot - low < high - pivot)
